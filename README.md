@@ -15,3 +15,6 @@
 - Java provides ---> JPA SPECIFICATION.
 - Hibernate, Apache iBATIS, etc ---> use this specification and create their implementations of JPA/ORM specification.
 - Spring data jpa uses Hibernate as ORM tool by default.
+
+### Entities :
+![Image1](https://github.com/Mnyu/spring-data-jpa/tree/main/src/main/resources/static/entities.png)
