@@ -17,4 +17,4 @@
 - Spring data jpa uses Hibernate as ORM tool by default.
 
 ### Entities :
-![Image1](https://github.com/Mnyu/spring-data-jpa/tree/main/src/main/resources/static/entities.png)
+![Image1](https://github.com/Mnyu/spring-data-jpa/blob/main/src/main/resources/static/entities.png)
