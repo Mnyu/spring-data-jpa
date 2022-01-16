@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://mk:5432/postgres?currentSchema=schooldb
+    username: postgres
+    password: s3cr3t
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
