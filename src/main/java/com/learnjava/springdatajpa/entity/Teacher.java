@@ -31,11 +31,15 @@ public class Teacher {
 
     private String lastName;
 
-    @OneToMany(
-            cascade = CascadeType.ALL // CascadeType.ALL defined here for simplicity.
-    )
-    @JoinColumn(
-            name = "teacher_id",
-            referencedColumnName = "teacherId")
-    private List<Course> courses;
+//    @OneToMany(
+//            cascade = CascadeType.ALL // CascadeType.ALL defined here for simplicity.
+//    )
+//    @JoinColumn(
+//            name = "teacher_id",
+//            referencedColumnName = "teacherId")
+//    private List<Course> courses;
+
+    // Though the above is correct technically but having a ManyToOne relation at a course level is much more intuitive,
+    // readable and that is also a guidance provided by JPA specification to go for ManyToOne relationship whenever
+    // possible.
 }
