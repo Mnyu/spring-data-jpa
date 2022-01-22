@@ -18,3 +18,24 @@
 
 ### Example Class Diagram of Entities :
 ![Image1](https://github.com/Mnyu/spring-data-jpa/blob/main/src/main/resources/static/entities.png)
+
+
+### Topics covered :
+1. Mapping Entities with DB.
+2. Different JPA Annotations.
+3. Understanding Repositories and their methods.
+4. @Embeddable and @Embedded Annotation.
+5. @Query Annotation.
+6. Native Queries.
+7. Query Named Params.
+8. @Transactional and @Modifying Annotation.
+9. JPA One-To-One Relationship.
+10. Cascade Types.
+11. Fetch Types.
+12. Uni & Bi directional relationship.
+13. JPA One-To-Many Relationship.
+14. JPA Many-To-One Relationship.
+15. Paging and Sorting.
+16. JPA Many-To-Many Relationship.
+
+Reference : https://www.youtube.com/watch?v=XszpXoII9Sg
