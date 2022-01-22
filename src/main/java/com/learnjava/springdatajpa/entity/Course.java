@@ -11,9 +11,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -42,4 +46,16 @@ public class Course {
     )
     private Teacher teacher;
 
+    @ManyToMany(cascade = CascadeType.ALL) // CascadeType.ALL defined here for simplicity.
+    @JoinTable(name = "student_course_mapping",
+            joinColumns = @JoinColumn(name = "course_id", referencedColumnName = "courseId"),
+            inverseJoinColumns = @JoinColumn(name = "student_id", referencedColumnName = "studentId"))
+    private List<Student> students;
+
+
+    public void addStudent(Student student) {
+        if (students == null)
+            students = new ArrayList<>();
+        students.add(student);
+    }
 }

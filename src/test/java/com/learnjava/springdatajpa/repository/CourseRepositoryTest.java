@@ -1,6 +1,8 @@
 package com.learnjava.springdatajpa.repository;
 
 import com.learnjava.springdatajpa.entity.Course;
+import com.learnjava.springdatajpa.entity.Guardian;
+import com.learnjava.springdatajpa.entity.Student;
 import com.learnjava.springdatajpa.entity.Teacher;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,6 +73,28 @@ class CourseRepositoryTest {
         Pageable firstPageWith10Records = PageRequest.of(0, 10);
         List<Course> courses = courseRepository.findByCourseTitleContaining("D", firstPageWith10Records).getContent();
         System.out.println(courses);
+    }
+
+    @Test
+    public void saveCourseWithStudentAndTeacher() {
+        Teacher teacher = Teacher.builder()
+                .firstName("Rakesh")
+                .lastName("Sharma")
+                .build();
+        Student student = Student.builder()
+                .emailId("abhi@gmail.com")
+                .firstName("Abhishek")
+                .lastName("Sharma")
+                .build();
+
+        Course course = Course.builder()
+                .courseTitle("AI")
+                .credit(7)
+                .teacher(teacher)
+                .build();
+        course.addStudent(student);
+
+        courseRepository.save(course);
     }
 
 }
